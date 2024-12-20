@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Join today</h1>
+    <br><br>
+    <form method="POST" action="{% url 'joins' %}">
+        {% csrf_token %}
+
+        <div class="mb-3">
+        <input type="text" class="form-control"  placeholder="First Name" name="fname" value="{{ fname }}">
+      </div>
+
+        <div class="mb-3">
+        <input type="text" class="form-control"  placeholder="Last Name" name="lname" value="{{ lname }}">
+      </div>
+
+        <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Age" name="age" value="{{ age }}">
+      </div>
+
+        <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Email Address" name="email" value="{{ email }}">
+      </div>
+
+        <div class="mb-3">
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="passwd">
+      </div>
+
+      <button type="submit" class="btn btn-secondary">Submit</button>
+</form>
+{% endblock %}

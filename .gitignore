@@ -1,0 +1,5 @@
+.idea
+db.sqlite3
+djangodb/__pycache__
+website/__pycache__
+website/migrations
